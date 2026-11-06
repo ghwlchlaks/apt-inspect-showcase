@@ -3,10 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈체크 랩 (HOMECHECK LAB) | 신축 아파트 정밀 하자점검 엔지니어링</title>
-  <meta name="description" content="신축 아파트 입주 전 육안으로 안 보이는 단열·수평·배관 결함까지 4대 정밀 장비로 진단합니다. 건축 특급 감리원 2인 1조 150분 정밀 점검.">
+  <title>홈체크 랩 (HOMECHECK LAB) | 신축 아파트 정밀 사전점검 서비스</title>
+  <meta name="description" content="신축 아파트 입주 전 4대 정밀 장비 기반 하자점검 공식 서비스. 실시간 견적 시뮬레이터 및 온라인 접수.">
   
-  <!-- Pretendard Font -->
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="홈체크 랩 | 신축 아파트 정밀 사전점검">
+  <meta property="og:description" content="신축 아파트 사전점검 턴키 솔루션. 전용면적별 실시간 견적 산출 및 5단계 정밀 점검.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apt-inspect-showcase.vercel.app">
+
+  <!-- Pretendard Webfont -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   
   <!-- Tailwind CSS CDN -->
@@ -25,11 +31,11 @@
           },
           colors: {
             brand: {
-              900: '#0B132B',
-              800: '#1C2541',
-              700: '#3A506B',
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
               accent: '#2563EB',
-              warning: '#D97706',
+              amber: '#D97706',
               surface: '#F8FAFC'
             }
           }
@@ -40,12 +46,11 @@
 
   <style>
     body { font-family: 'Pretendard', sans-serif; }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
+    .hero-video-overlay {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.78) 100%);
     }
     .technical-grid {
-      background-size: 24px 24px;
+      background-size: 28px 28px;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
                         linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     }
@@ -58,19 +63,19 @@
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center gap-2">
         <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-          실시간 예약 현황
+          실시간 접수 현황
         </span>
         <span class="text-slate-300">올림픽파크포레온 · 메이플자이 · 래미안원페를라 사전점검 슬롯 접수 중</span>
       </div>
       <div class="flex items-center gap-4 text-slate-400">
-        <span>건축/토목 감리 전문가 100% 투입</span>
+        <span>건축 특급 감리원 100% 투입</span>
         <span>•</span>
-        <span>시공사 제출용 공문 리포트 당일 발급</span>
+        <span>시공사 제출용 공문 규격 리포트 당일 발송</span>
       </div>
     </div>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar (PC/Mobile 반응형) -->
   <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -80,348 +85,431 @@
           </div>
           <span>HOMECHECK <span class="text-blue-600 font-extrabold">LAB</span></span>
         </a>
-        <span class="hidden md:inline-block text-xs text-slate-400 pl-2 border-l border-slate-200">
-          아파트 정밀 사전점검 연구소
-        </span>
       </div>
 
       <!-- Desktop Nav -->
-      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="#equipment" class="hover:text-blue-600 transition-colors">정밀 장비</a>
-        <a href="#defects" class="hover:text-blue-600 transition-colors">하자 진단 사례</a>
-        <a href="#process" class="hover:text-blue-600 transition-colors">점검 프로세스</a>
-        <a href="#pricing" class="hover:text-blue-600 transition-colors">정찰제 비용</a>
-        <a href="#faq" class="hover:text-blue-600 transition-colors">자주 묻는 질문</a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#features" class="hover:text-blue-600 transition-colors">서비스 차별점</a>
+        <a href="#simulator" class="hover:text-blue-600 transition-colors">가격 시뮬레이터</a>
+        <a href="#cases" class="hover:text-blue-600 transition-colors">실제 점검 사례</a>
+        <a href="#process" class="hover:text-blue-600 transition-colors">5단계 프로세스</a>
+        <a href="#equipment" class="hover:text-blue-600 transition-colors">사용 장비</a>
+        <a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a>
+        <a href="#inquiry-section" class="text-blue-600 font-bold hover:text-blue-700">온라인 문의·조회</a>
       </div>
 
-      <!-- Action Button -->
+      <!-- Action Buttons -->
       <div class="flex items-center gap-3">
-        <a href="#booking" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg shadow-sm shadow-blue-600/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
-          <i data-lucide="calendar-check" class="w-4 h-4"></i>
-          <span>사전점검 신청</span>
+        <a href="#inquiry-section" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg shadow-sm shadow-blue-600/30 transition-all hover:scale-[1.02]">
+          <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+          <span>사전점검 신청/문의</span>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative technical-grid pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-slate-200 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Column: Value Proposition -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold">
-            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            신축 아파트 사전점검 전문 정밀진단
-          </div>
-          
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-900 tracking-tight leading-[1.2]">
-            육안으로 안 보이는 단열·수평·배관,<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              4대 계측 장비로 정밀 진단합니다
-            </span>
-          </h1>
+  <!-- ========================================== -->
+  <!-- 2-1. 메인 페이지 (PC/Mobile 반응형 웹)      -->
+  <!-- ========================================== -->
 
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-            입주 후 발견된 하자는 시공사 하자보수 처리가 수개월 지연됩니다. 
-            건축·토목 특급 감리원 2인 1조가 150분간 85개 항목을 정밀 전수 검사하고, 당일 시공사 제출용 공문 규격 리포트를 발급해 드립니다.
-          </p>
+  <!-- 1. Hero Section (배경 비디오 루프 & 메인 CTA) -->
+  <section id="hero" class="relative min-h-[640px] lg:h-[740px] flex items-center justify-center overflow-hidden border-b border-slate-200">
+    <!-- Background Loop Video / Ambient Canvas -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80" alt="Apartment Construction" class="w-full h-full object-cover">
+      <div class="absolute inset-0 hero-video-overlay"></div>
+    </div>
 
-          <!-- Key Metrics -->
-          <div class="grid grid-cols-3 gap-4 pt-2 pb-2 border-y border-slate-200">
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-brand-900 font-mono">14,280+</div>
-              <div class="text-xs text-slate-500 mt-0.5">누적 점검 세대수</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-blue-600 font-mono">38.4<span class="text-base">건</span></div>
-              <div class="text-xs text-slate-500 mt-0.5">세대당 평균 하자 발견</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-mono">100%</div>
-              <div class="text-xs text-slate-500 mt-0.5">국가공인 자격 점검원</div>
-            </div>
-          </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16 space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-semibold backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+        신축 아파트 사전점검 공식 전문 대행
+      </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a href="#booking" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/25 transition-all text-base">
-              <span>사전점검 예약 및 견적 조회</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <a href="#defects" class="flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 font-semibold px-5 py-3.5 rounded-xl border border-slate-300 transition-all text-base">
-              <i data-lucide="file-search" class="w-4 h-4 text-slate-500"></i>
-              <span>실제 점검 사례 보기</span>
-            </a>
-          </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+        입주 후 발견하면 늦습니다<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">
+          단열·수평·배관 결함, 4대 정밀 장비로 진단
+        </span>
+      </h1>
 
-          <div class="flex items-center gap-2 text-xs text-slate-500 pt-1">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
-            <span>예약금 없이 간편 신청 • 점검 3일 전까지 100% 무료 취소 및 일정 변경 가능</span>
-          </div>
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        건축·토목 특급 감리원 2인 1조가 150분간 85개 항목을 전수 진단하고,<br class="hidden sm:inline">
+        시공사 하자 접수용 공문 규격 리포트를 당일 즉시 발송합니다.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+        <a href="#simulator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-base shadow-xl shadow-blue-600/40 transition-all hover:-translate-y-0.5">
+          <span>실시간 견적 시뮬레이터</span>
+          <i data-lucide="calculator" class="w-5 h-5"></i>
+        </a>
+        <a href="#inquiry-section" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base backdrop-blur-md border border-white/20 transition-all">
+          <i data-lucide="edit-3" class="w-5 h-5 text-blue-300"></i>
+          <span>온라인 사전점검 접수</span>
+        </a>
+      </div>
+
+      <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-white/10 text-left">
+        <div>
+          <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">14,280+</div>
+          <div class="text-xs text-slate-400 mt-0.5">누적 점검 세대</div>
         </div>
-
-        <!-- Right Column: Interactive Diagnostic Card Preview -->
-        <div class="lg:col-span-5">
-          <div class="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
-            <div class="bg-brand-900 px-5 py-4 text-white flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="font-semibold text-sm">실시간 현장 진단 리포트 미리보기</span>
-              </div>
-              <span class="text-xs font-mono text-slate-400">FLIR-E8XT-SYNC</span>
-            </div>
-
-            <!-- Report Card Body -->
-            <div class="p-5 space-y-4">
-              <!-- Defect 1 -->
-              <div class="p-3.5 rounded-xl bg-red-50/70 border border-red-200">
-                <div class="flex items-center justify-between text-xs font-semibold text-red-700 mb-1">
-                  <span class="flex items-center gap-1.5">
-                    <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-                    [중대 결함] 안방 발코니 외벽 단열 누락
-                  </span>
-                  <span class="font-mono text-red-600">ΔT 8.4℃</span>
-                </div>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  외벽 창호 모서리 우레탄폼 미충진으로 인한 열교 현상 감지. 결로 및 곰팡이 발생 확정 구간으로 시공사 단열 재시공 공문 첨부.
-                </p>
-              </div>
-
-              <!-- Defect 2 -->
-              <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200">
-                <div class="flex items-center justify-between text-xs font-semibold text-amber-800 mb-1">
-                  <span class="flex items-center gap-1.5">
-                    <i data-lucide="ruler" class="w-3.5 h-3.5"></i>
-                    [구조 결함] 거실 아트월 타일 수직 단차
-                  </span>
-                  <span class="font-mono text-amber-700">단차 3.2mm</span>
-                </div>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  BOSCH 3D 레이저 계측 결과 허용 오차(1.5mm)를 2배 초과. 타일 탈락 위험에 따른 전면 재부착 하자 스티커 부착.
-                </p>
-              </div>
-
-              <!-- Defect 3 -->
-              <div class="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200">
-                <div class="flex items-center justify-between text-xs font-semibold text-blue-800 mb-1">
-                  <span class="flex items-center gap-1.5">
-                    <i data-lucide="droplets" class="w-3.5 h-3.5"></i>
-                    [배관 결함] 공용 욕실 트랩 시멘트 슬러지
-                  </span>
-                  <span class="font-mono text-blue-700">관경 45% 폐색</span>
-                </div>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                  배관 내시경 카메라 진단 결과 타일 시공 잔여 몰탈 유입 확인. 고압 세척 및 트랩 교체 요청 명시.
-                </p>
-              </div>
-
-              <!-- Summary Foot -->
-              <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                <span>점검 소요: 154분 / 2인 1조</span>
-                <span class="font-semibold text-brand-900">총 42건 하자 데이터베이스화 완료</span>
-              </div>
-            </div>
-          </div>
+        <div>
+          <div class="text-xl sm:text-2xl font-extrabold text-blue-400 font-mono">38.4건</div>
+          <div class="text-xs text-slate-400 mt-0.5">세대당 평균 하자 발견</div>
         </div>
-
+        <div>
+          <div class="text-xl sm:text-2xl font-extrabold text-emerald-400 font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-0.5">국가공인 감리 기술자</div>
+        </div>
+        <div>
+          <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">당일 19시</div>
+          <div class="text-xs text-slate-400 mt-0.5">공문 리포트 발급 보장</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Equipment Section (정밀 장비 4종) -->
-  <section id="equipment" class="py-20 bg-white border-b border-slate-200">
+  <!-- 2. 서비스 차별점 (차별점 6가지 카드) -->
+  <section id="features" class="py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mb-12">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">PRECISION INSTRUMENTS</h2>
+      <div class="max-w-3xl mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">SERVICE ADVANTAGES</h2>
         <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
-          일반 육안 점검으로는 결코 찾아낼 수 없는<br>
-          <span class="text-blue-600">4대 국가공인 정밀 계측 장비</span>
+          타사와 차별화되는 홈체크 랩 6대 핵심 강점
         </h3>
-        <p class="text-slate-600 mt-3 text-base">
-          감각이나 주관에 의존하지 않습니다. 수치와 오차 범위가 명확히 기록되는 산업용 최고 등급 장비만을 현장에 투입합니다.
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          알바생이나 단순 육안 점검이 아닌, 국가공인 감리 전문가와 공인 계측 장비가 만드는 압도적 신뢰도입니다.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Equipment 1 -->
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:border-blue-400 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-4">
-              <i data-lucide="flame" class="w-6 h-6"></i>
-            </div>
-            <div class="text-xs font-mono font-bold text-slate-400 uppercase">Thermal Imaging</div>
-            <h4 class="text-lg font-bold text-brand-900 mt-1">FLIR 고해상도 열화상 카메라</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              벽면 단열재 누락, 발코니 결로 취약점, 바닥 보일러 배관 누수 및 균일 난방 여부를 0.05℃ 단위 미세 온도차로 검출합니다.
-            </p>
+        <!-- Advantage 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="award" class="w-6 h-6"></i>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500 space-y-1">
-            <div class="flex justify-between"><span>탐지 대상</span><span class="text-slate-800 font-semibold">단열재/누수/결로</span></div>
-            <div class="flex justify-between"><span>정밀도</span><span class="font-mono text-blue-600">±0.05℃</span></div>
-          </div>
+          <h4 class="text-lg font-bold text-brand-900">1. 건축·토목 특급 감리원 100% 투입</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            일용직이나 단기 교육 알바생은 배제합니다. 현업 건설 현장 감리 경력 10년 이상의 국가공인 자격 소지자 2인이 직접 방문합니다.
+          </p>
         </div>
 
-        <!-- Equipment 2 -->
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:border-blue-400 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
-              <i data-lucide="crosshair" class="w-6 h-6"></i>
-            </div>
-            <div class="text-xs font-mono font-bold text-slate-400 uppercase">3D Laser Level</div>
-            <h4 class="text-lg font-bold text-brand-900 mt-1">BOSCH 360° 그린 레이저 레벨기</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              아트월 수평·수직 오차, 문틀 및 창호 기울기, 바닥 구배(물고임) 불량을 0.1mm 공차 범위 내에서 정밀 실측합니다.
-            </p>
+        <!-- Advantage 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="crosshair" class="w-6 h-6"></i>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500 space-y-1">
-            <div class="flex justify-between"><span>탐지 대상</span><span class="text-slate-800 font-semibold">벽체/바닥/창호 기울기</span></div>
-            <div class="flex justify-between"><span>정밀도</span><span class="font-mono text-blue-600">±0.2mm/m</span></div>
-          </div>
+          <h4 class="text-lg font-bold text-brand-900">2. 4대 정밀 계측 장비 전수 점검</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            FLIR 고해상도 열화상, BOSCH 3D 레이저 레벨기, 라돈아이 플러스2, 방수 배관 내시경을 전 세대 기본 장비로 투입합니다.
+          </p>
         </div>
 
-        <!-- Equipment 3 -->
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:border-blue-400 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
-              <i data-lucide="wind" class="w-6 h-6"></i>
-            </div>
-            <div class="text-xs font-mono font-bold text-slate-400 uppercase">Air Quality & Radon</div>
-            <h4 class="text-lg font-bold text-brand-900 mt-1">라돈아이 플러스2 & VOCs 측정기</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              1급 발암물질 라돈(대리석/타일), 포름알데히드, 휘발성유기화합물(새집증후군) 농도를 환경부 실내 권고 기준치와 정밀 대조합니다.
-            </p>
+        <!-- Advantage 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="file-check-2" class="w-6 h-6"></i>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500 space-y-1">
-            <div class="flex justify-between"><span>탐지 대상</span><span class="text-slate-800 font-semibold">라돈 / 포름알데히드</span></div>
-            <div class="flex justify-between"><span>기준치 대조</span><span class="font-mono text-blue-600">148 Bq/㎥</span></div>
-          </div>
+          <h4 class="text-lg font-bold text-brand-900">3. 시공사 제출용 공문 리포트 당일 발급</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            건설사 하자접수 앱에 100% 복사·붙여넣기가 가능한 표준 규격 양식으로 모바일 웹 뷰와 PDF 리포트를 당일 19시까지 송부합니다.
+          </p>
         </div>
 
-        <!-- Equipment 4 -->
-        <div class="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:border-blue-400 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
-              <i data-lucide="eye" class="w-6 h-6"></i>
-            </div>
-            <div class="text-xs font-mono font-bold text-slate-400 uppercase">Pipe Endoscope</div>
-            <h4 class="text-lg font-bold text-brand-900 mt-1">HD 광학 방수 배관 내시경</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              욕실 및 세탁실 배수관 내부로 3M 카메라를 진입시켜 시멘트 몰탈 슬러지 퇴적, 배관 파손, 배수 구배 역경사를 확인합니다.
-            </p>
+        <!-- Advantage 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="clock" class="w-6 h-6"></i>
           </div>
-          <div class="mt-6 pt-4 border-t border-slate-200 text-xs font-medium text-slate-500 space-y-1">
-            <div class="flex justify-between"><span>탐지 대상</span><span class="text-slate-800 font-semibold">배수구 폐색/시멘트 잔재</span></div>
-            <div class="flex justify-between"><span>해상도</span><span class="font-mono text-blue-600">1080p FHD</span></div>
+          <h4 class="text-lg font-bold text-brand-900">4. 150분 규정 준수 심층 전수 검사</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            수박 겉핥기식 30분 점검은 거부합니다. 세대 현관부터 실외기실까지 7개 구역 85개 세부 항목을 최소 150분간 꼼꼼히 살핍니다.
+          </p>
+        </div>
+
+        <!-- Advantage 5 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="message-square" class="w-6 h-6"></i>
           </div>
+          <h4 class="text-lg font-bold text-brand-900">5. 1:1 현장 심층 대면 브리핑 & 가이드</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            점검 직후 세대주님과 현장을 함께 돌며 중대 하자 지점마다 넘버링 스티커를 부착하고, 건설사에 어떻게 보수를 요구해야 할지 코칭합니다.
+          </p>
+        </div>
+
+        <!-- Advantage 6 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-brand-900">6. 예약금 0원 & 100% 현장 후불제</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            사전 예약금을 요구하지 않습니다. 현장 점검 완료 후 브리핑을 만족스럽게 받으신 뒤 결제하시는 100% 안심 후불제를 보장합니다.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Defect Case Gallery (하자 유형별 실제 사례) -->
-  <section id="defects" class="py-20 bg-slate-50 border-b border-slate-200">
+  <!-- 3. 가격 시뮬레이터 (전용면적 5구간 × 추가 옵션 2종 실시간 합계 산출) -->
+  <section id="simulator" class="py-20 bg-slate-50 technical-grid border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">PRICING SIMULATOR</h2>
+        <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
+          실시간 사전점검 견적 시뮬레이터
+        </h3>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          전용면적 5구간과 원하시는 정밀 옵션을 선택하시면 확정 금액이 즉시 계산됩니다.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-10 space-y-8">
+        
+        <!-- Step A: 전용면적 5구간 선택 -->
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
+            [1단계] 전용면적 선택 (5개 구간)
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+            <label class="flex flex-col p-3.5 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 text-center">
+              <input type="radio" name="simArea" value="49" onchange="runSimulator()" class="sr-only">
+              <span class="font-bold text-sm text-slate-900">49㎡ 이하</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">소형/원룸형</span>
+              <span class="text-xs font-mono font-bold text-blue-600 mt-2">240,000원</span>
+            </label>
+
+            <label class="flex flex-col p-3.5 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 text-center">
+              <input type="radio" name="simArea" value="59" onchange="runSimulator()" class="sr-only">
+              <span class="font-bold text-sm text-slate-900">59㎡</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">24~25평형</span>
+              <span class="text-xs font-mono font-bold text-blue-600 mt-2">280,000원</span>
+            </label>
+
+            <label class="flex flex-col p-3.5 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 text-center">
+              <input type="radio" name="simArea" value="74" onchange="runSimulator()" class="sr-only">
+              <span class="font-bold text-sm text-slate-900">74㎡</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">29~30평형</span>
+              <span class="text-xs font-mono font-bold text-blue-600 mt-2">310,000원</span>
+            </label>
+
+            <label class="flex flex-col p-3.5 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 text-center">
+              <input type="radio" name="simArea" value="84" checked onchange="runSimulator()" class="sr-only">
+              <span class="font-bold text-sm text-slate-900">84㎡ (BEST)</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">32~35평형</span>
+              <span class="text-xs font-mono font-bold text-blue-600 mt-2">350,000원</span>
+            </label>
+
+            <label class="flex flex-col p-3.5 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 text-center col-span-2 sm:col-span-1">
+              <input type="radio" name="simArea" value="114" onchange="runSimulator()" class="sr-only">
+              <span class="font-bold text-sm text-slate-900">114㎡ 이상</span>
+              <span class="text-[11px] text-slate-500 mt-0.5">40평형대~</span>
+              <span class="text-xs font-mono font-bold text-blue-600 mt-2">450,000원</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step B: 추가 옵션 2종 선택 -->
+        <div class="pt-6 border-t border-slate-200">
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">
+            [2단계] 정밀 계측 추가 옵션 선택 (2종)
+          </label>
+          <div class="space-y-3">
+            <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="simOptRadon" onchange="runSimulator()" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                <div>
+                  <div class="text-sm font-bold text-slate-900">옵션 1: 라돈 및 1급 발암물질 정밀 공기질 시험 성적서</div>
+                  <div class="text-xs text-slate-500">대리석 아트월 및 욕실 타일 부위 라돈아이 플러스2 실측 성적서 발행</div>
+                </div>
+              </div>
+              <span class="font-mono text-sm font-bold text-blue-600">+50,000원</span>
+            </label>
+
+            <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-50/40 cursor-pointer transition-all">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="simOptThermal" onchange="runSimulator()" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                <div>
+                  <div class="text-sm font-bold text-slate-900">옵션 2: 외벽 단열재 결로·열교 전수 열화상 심층 분석서</div>
+                  <div class="text-xs text-slate-500">겨울철 곰팡이 방지를 위한 외창호 샷시 모서리 단열 결손 정밀 진단</div>
+                </div>
+              </div>
+              <span class="font-mono text-sm font-bold text-blue-600">+30,000원</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Simulator Total Output Bar -->
+        <div class="p-6 rounded-2xl bg-brand-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="text-xs text-slate-400">실시간 계산된 점검 견적 (부가세 포함 / 추가금 0원)</div>
+            <div class="text-3xl font-extrabold text-blue-400 font-mono mt-1" id="simTotalDisplay">
+              350,000원
+            </div>
+            <div class="text-[11px] text-slate-400 mt-1" id="simSummaryText">전용 84㎡ 기준 기본 점검</div>
+          </div>
+          <a href="#inquiry-section" onclick="transferSimToForm()" class="w-full sm:w-auto px-7 py-3.5 bg-blue-600 hover:bg-blue-700 font-bold rounded-xl text-sm transition-all shadow-lg shadow-blue-600/40 flex items-center justify-center gap-2">
+            <span>이 견적으로 온라인 접수하기</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 실제 점검 사례 (사례 6건: 사진·등급 표기) -->
+  <section id="cases" class="py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
-          <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">FIELD CASE ARCHIVE</h2>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">INSPECTION CASES</h2>
           <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
-            신축 아파트 주요 하자 4대 유형
+            신축 아파트 실제 하자 진단 사례 6건
           </h3>
           <p class="text-slate-600 mt-2 text-sm sm:text-base">
-            최근 입주 단지 1,500세대의 실제 점검 데이터를 기반으로 한 대표 하자 패턴입니다.
+            최근 입주 신축 단지에서 적발된 실제 결함 데이터와 위험도 등급입니다.
           </p>
-        </div>
-        <div class="mt-4 md:mt-0 flex gap-2">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700">
-            <span class="w-2 h-2 rounded-full bg-red-500"></span> 중대 하자
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-700">
-            <span class="w-2 h-2 rounded-full bg-amber-500"></span> 마감 하자
-          </span>
         </div>
       </div>
 
-      <!-- Case Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Case 1: Window Condensation -->
-        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center">
-            <!-- Simulated Thermal Gradient View -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900 via-indigo-950 to-amber-700 opacity-90"></div>
+        <!-- Case 1 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-950 via-slate-900 to-red-900 opacity-90"></div>
             <div class="relative z-10 text-center p-4 text-white">
-              <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-red-500 text-white font-bold mb-2">THERMAL IMAGING</span>
-              <div class="text-lg font-bold">창호 모서리 단열 결손</div>
-              <div class="text-xs text-slate-300 font-mono mt-1">외기 유입구 최저 11.2℃ (실내 21.0℃)</div>
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-red-600 text-white font-bold mb-1.5">THERMAL ΔT 8.6℃</span>
+              <div class="text-base font-bold">창호 하부 단열재 미시공</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">올림픽파크포레온 84A 타입</div>
             </div>
-            <div class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur rounded text-[10px] font-mono text-emerald-400">
-              ΔT 9.8℃ 하자 확정
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-red-500 text-white text-[10px] font-bold">
+              D등급 (중대하자)
             </div>
           </div>
           <div class="p-5">
-            <div class="flex items-center justify-between text-xs font-semibold mb-2">
-              <span class="text-red-600 bg-red-50 px-2 py-0.5 rounded border border-red-200">중대 하자</span>
-              <span class="text-slate-400">발코니/창호</span>
-            </div>
-            <h4 class="font-bold text-brand-900 text-base">발코니 샷시 하부 우레탄폼 미충진</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              육안으로는 정상이나 겨울철 결로 및 곰팡이가 벽면 전체로 번지는 주원인입니다. 충진재 재시공 공문 첨부 완료.
+            <div class="text-xs text-slate-400 mb-1">발코니 / 외창호 단열</div>
+            <h4 class="font-bold text-brand-900 text-sm">외벽 샷시 하부 우레탄폼 누락</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              육안 확인 불가. FLIR 열화상으로 겨울철 결로 및 곰팡이 발생 원인 적발, 시공사 폼 재충진 공문 접수.
             </p>
           </div>
         </div>
 
-        <!-- Case 2: Tile Leveling -->
-        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-800 to-emerald-950 opacity-90"></div>
+        <!-- Case 2 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-900 opacity-90"></div>
             <div class="relative z-10 text-center p-4 text-white">
-              <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500 text-white font-bold mb-2">3D LASER SURVEY</span>
-              <div class="text-lg font-bold">거실 벽체 수직도 편차</div>
-              <div class="text-xs text-slate-300 font-mono mt-1">기준선 대비 상부 12mm 전면 쏠림</div>
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-emerald-600 text-white font-bold mb-1.5">3D LASER SURVEY</span>
+              <div class="text-base font-bold">거실 아트월 타일 수직 단차</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">메이플자이 59B 타입</div>
             </div>
-            <div class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur rounded text-[10px] font-mono text-amber-400">
-              오차 4배 초과
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-amber-500 text-white text-[10px] font-bold">
+              C등급 (구조기능)
             </div>
           </div>
           <div class="p-5">
-            <div class="flex items-center justify-between text-xs font-semibold mb-2">
-              <span class="text-amber-600 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">구조 마감</span>
-              <span class="text-slate-400">거실/벽체</span>
-            </div>
-            <h4 class="font-bold text-brand-900 text-base">석고보드 가벽 수직 불량 및 배부름</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              가구(장식장/TV) 설치 시 뒷면이 뜨거나 전도 위험이 발생합니다. 가벽 보강 및 레벨 평탄화 요청서 작성.
+            <div class="text-xs text-slate-400 mb-1">거실 / 아트월</div>
+            <h4 class="font-bold text-brand-900 text-sm">대형 포세린 타일 3.4mm 돌출 단차</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              허용 기준(1.5mm) 2배 초과. 타일 들뜸 및 전도 위험으로 전체 재시공 지적 스티커 부착 완료.
             </p>
           </div>
         </div>
 
-        <!-- Case 3: Pipe Obstruction -->
-        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+        <!-- Case 3 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-tr from-slate-950 via-blue-950 to-slate-900 opacity-90"></div>
             <div class="relative z-10 text-center p-4 text-white">
-              <span class="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500 text-white font-bold mb-2">BORESCOPE CAMERA</span>
-              <div class="text-lg font-bold">욕실 배수관 몰탈 침적</div>
-              <div class="text-xs text-slate-300 font-mono mt-1">지하 1.2M 지점 콘크리트 경화 확인</div>
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-blue-600 text-white font-bold mb-1.5">PIPE ENDOSCOPE</span>
+              <div class="text-base font-bold">욕실 배수관 시멘트 슬러지</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">래미안원페를라 84B 타입</div>
             </div>
-            <div class="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur rounded text-[10px] font-mono text-red-400">
-              배수관 막힘 경고
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-red-500 text-white text-[10px] font-bold">
+              D등급 (중대하자)
             </div>
           </div>
           <div class="p-5">
-            <div class="flex items-center justify-between text-xs font-semibold mb-2">
-              <span class="text-red-600 bg-red-50 px-2 py-0.5 rounded border border-red-200">중대 하자</span>
-              <span class="text-slate-400">욕실/배관</span>
+            <div class="text-xs text-slate-400 mb-1">욕실 / 오배수관</div>
+            <h4 class="font-bold text-brand-900 text-sm">트랩 내부 타일 몰탈 폐색 40%</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              입주 후 역류 및 악취를 유발하는 시멘트 잔재 적발. 고압 세척 및 트랩 교체 확약 확보.
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-950 via-slate-900 to-indigo-950 opacity-90"></div>
+            <div class="relative z-10 text-center p-4 text-white">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-purple-600 text-white font-bold mb-1.5">RADON EYE 184 Bq/㎥</span>
+              <div class="text-base font-bold">복도 복합대리석 라돈 방출</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">디에이치퍼스티어 114 타입</div>
             </div>
-            <h4 class="font-bold text-brand-900 text-base">트랩 내부 타일 시멘트 슬러지 고착</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              입주 후 샤워 시 물이 고이고 역류를 유발합니다. 시공사 장비 투입 배관 석션 및 배관 클리닝 공문 즉시 발송.
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-amber-500 text-white text-[10px] font-bold">
+              C등급 (환경유해)
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-slate-400 mb-1">복도 / 인조대리석</div>
+            <h4 class="font-bold text-brand-900 text-sm">환경부 권고치(148Bq) 초과 라돈 검출</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              친환경 인증 자재 여부 재확인 및 세대 전열교환기 상시 가동 시험성적서 첨부 요구.
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 5 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 via-amber-950 to-slate-950 opacity-90"></div>
+            <div class="relative z-10 text-center p-4 text-white">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-amber-600 text-white font-bold mb-1.5">FLOOR GRADIENT -1.2%</span>
+              <div class="text-base font-bold">부부욕실 바닥 역구배 물고임</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">트리우스광명 74 타입</div>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-amber-500 text-white text-[10px] font-bold">
+              B등급 (마감기능)
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-slate-400 mb-1">욕실 / 타일구배</div>
+            <h4 class="font-bold text-brand-900 text-sm">배수구 반대 방향 역경사 물고임</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              샤워 부스 밖으로 물이 넘치는 구조. 바닥 타일 철거 후 구배 재조정 하자 공문 접수.
+            </p>
+          </div>
+        </div>
+
+        <!-- Case 6 -->
+        <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-800 to-indigo-950 opacity-90"></div>
+            <div class="relative z-10 text-center p-4 text-white">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-mono bg-blue-500 text-white font-bold mb-1.5">ELECTRIC TESTER</span>
+              <div class="text-base font-bold">주방 아일랜드 콘센트 접지 누락</div>
+              <div class="text-xs text-slate-300 font-mono mt-0.5">철산자이브리에르 59 타입</div>
+            </div>
+            <div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-red-500 text-white text-[10px] font-bold">
+              D등급 (화재위험)
+            </div>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-slate-400 mb-1">주방 / 전기설비</div>
+            <h4 class="font-bold text-brand-900 text-sm">접지선 미결선으로 감전 및 화재 위험</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              전자제품 외함 전위차 발생 위험. 시공사 전기 배선 전면 재결선 긴급 조치 통보.
             </p>
           </div>
         </div>
@@ -430,56 +518,64 @@
     </div>
   </section>
 
-  <!-- Process Timeline (4단계 프로세스) -->
-  <section id="process" class="py-20 bg-white border-b border-slate-200">
+  <!-- 5. 점검 프로세스 (점검 5단계 프로세스) -->
+  <section id="process" class="py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">SERVICE WORKFLOW</h2>
+      <div class="max-w-3xl mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">5-STEP WORKFLOW</h2>
         <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
-          예약부터 당일 리포트까지,<br>
-          체계적인 4단계 원스톱 점검 프로세스
+          체계적인 5단계 사전점검 프로세스
         </h3>
-        <p class="text-slate-600 mt-2 text-base">
-          사전점검 당일 복잡한 절차 없이, 전담 소장님이 모든 진단과 하자 스티커 부착을 전담합니다.
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          예약부터 당일 현장 브리핑, 시공사용 공문 리포트 발송까지 빈틈없이 진행됩니다.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         
         <!-- Step 1 -->
-        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 relative">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 relative shadow-sm">
           <div class="text-3xl font-extrabold text-blue-600 font-mono mb-3">01</div>
-          <h4 class="text-base font-bold text-brand-900 mb-2">온라인 간편 예약</h4>
+          <h4 class="font-bold text-brand-900 text-base mb-1.5">사전 예약·상담</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            아파트 단지명, 평형, 입주예정일 및 사전점검 희망일을 입력하시면 10분 내로 전담 점검팀이 배정됩니다. (예약금 0원)
+            단지명과 사전점검 희망일자 접수. 10분 내 전담 감리팀이 1:1 배정됩니다. (예약금 0원)
           </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 relative">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 relative shadow-sm">
           <div class="text-3xl font-extrabold text-blue-600 font-mono mb-3">02</div>
-          <h4 class="text-base font-bold text-brand-900 mb-2">현장 정밀 전수 점검</h4>
+          <h4 class="font-bold text-brand-900 text-base mb-1.5">150분 전수 점검</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            건축·토목 전문 인력 2인 1조가 150분간 현장에 상주하며 육안 50개 항목 + 4대 정밀 장비 35개 항목을 전수 진단합니다.
+            감리원 2인 1조가 현장에서 육안 50개 + 4대 정밀 장비 35개 항목을 150분간 정밀 검측합니다.
           </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 relative">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 relative shadow-sm">
           <div class="text-3xl font-extrabold text-blue-600 font-mono mb-3">03</div>
-          <h4 class="text-base font-bold text-brand-900 mb-2">1:1 대면 브리핑 & 스티커</h4>
+          <h4 class="font-bold text-brand-900 text-base mb-1.5">하자 스티커 부착</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            발견된 하자 위치마다 번호가 매겨진 공식 지적 스티커를 부착하고, 세대주님께 하자 원인과 보수 요구 방법을 브리핑합니다.
+            지적된 모든 하자 지점에 넘버링된 전용 스티커를 부착하고 위치 사진을 촬영합니다.
           </p>
         </div>
 
         <!-- Step 4 -->
-        <div class="bg-blue-50/70 rounded-xl p-6 border border-blue-200 relative">
-          <div class="text-3xl font-extrabold text-blue-700 font-mono mb-3">04</div>
-          <h4 class="text-base font-bold text-brand-900 mb-2">공문 규격 리포트 당일 발송</h4>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 relative shadow-sm">
+          <div class="text-3xl font-extrabold text-blue-600 font-mono mb-3">04</div>
+          <h4 class="font-bold text-brand-900 text-base mb-1.5">1:1 심층 브리핑</h4>
           <p class="text-xs text-slate-600 leading-relaxed">
-            점검 당일 19:00까지 시공사 하자접수 앱에 복사/붙여넣기 가능한 표준 공문 형식의 모바일 웹 및 PDF 리포트를 전송합니다.
+            점검 완료 후 세대주님과 현장을 돌며 중대/일반 하자 원인과 시공사 상대 보수 전략을 브리핑합니다.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="bg-blue-50/80 p-6 rounded-2xl border border-blue-200 relative shadow-sm">
+          <div class="text-3xl font-extrabold text-blue-700 font-mono mb-3">05</div>
+          <h4 class="font-bold text-brand-900 text-base mb-1.5">공문 리포트 발송</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            당일 19:00까지 건설사 하자접수 앱 규격의 모바일 웹 뷰와 PDF 리포트를 카카오톡/이메일로 전송합니다.
           </p>
         </div>
 
@@ -487,298 +583,466 @@
     </div>
   </section>
 
-  <!-- Pricing Table (정찰제 투명 가격표) -->
-  <section id="pricing" class="py-20 bg-slate-50 border-b border-slate-200">
+  <!-- 6. 사용 장비 소개 (장비 카드 섹션) -->
+  <section id="equipment" class="py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">TRANSPARENT PRICING</h2>
+      <div class="max-w-3xl mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">PRECISION INSTRUMENTS</h2>
         <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
-          추가금 없는 정찰제 점검 비용
+          현장에 전수 투입되는 4대 국가공인 정밀 계측 장비
         </h3>
-        <p class="text-slate-600 mt-2 text-sm sm:text-base">
-          장비 사용료, 리포트 발급비, 주말 추가금 일체 없음. 평형별 투명한 단가표를 준수합니다.
-        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Standard 59 -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold uppercase text-slate-400">전용 59㎡ (24~25평형)</div>
-            <h4 class="text-xl font-bold text-brand-900 mt-1">소형 평형 패키지</h4>
-            <div class="mt-4 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-brand-900 font-mono">280,000</span>
-              <span class="text-slate-500 text-sm">원 (VAT 포함)</span>
-            </div>
-            <ul class="mt-6 space-y-3 text-xs text-slate-600">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>전문 감리원 2인 1조 120분 점검</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>FLIR 열화상 & 레이저 수평 수직 측정</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>하자 지적 스티커 전수 부착</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>시공사용 모바일/PDF 리포트 당일 발송</li>
-            </ul>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-3">
+            <i data-lucide="flame" class="w-5 h-5"></i>
           </div>
-          <button onclick="selectPackage('59')" class="mt-8 w-full py-3 px-4 rounded-xl border border-slate-300 font-semibold text-slate-700 hover:bg-slate-50 text-sm transition-colors">
-            이 패키지로 신청하기
-          </button>
+          <div class="text-xs font-mono font-bold text-slate-400">FLIR E8-XT</div>
+          <h4 class="font-bold text-brand-900 text-base mt-1">고해상도 열화상 카메라</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            단열재 누락, 발코니 결로 취약 부위, 바닥 보일러 배관 누수를 0.05℃ 미세 온도차로 포착.
+          </p>
         </div>
 
-        <!-- Premium 84 (Most Popular) -->
-        <div class="bg-white rounded-2xl border-2 border-blue-600 p-8 shadow-lg relative flex flex-col justify-between">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-600 text-white text-xs font-bold rounded-full tracking-wide">
-            가장 많은 선택 (BEST)
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
+            <i data-lucide="crosshair" class="w-5 h-5"></i>
           </div>
-          <div>
-            <div class="text-xs font-bold uppercase text-blue-600">전용 84㎡ (32~35평형)</div>
-            <h4 class="text-xl font-bold text-brand-900 mt-1">국민 평형 올인원 패키지</h4>
-            <div class="mt-4 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-blue-600 font-mono">350,000</span>
-              <span class="text-slate-500 text-sm">원 (VAT 포함)</span>
-            </div>
-            <ul class="mt-6 space-y-3 text-xs text-slate-600">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>전문 감리원 2인 1조 150분 정밀 점검</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>4대 정밀 장비 (열화상+레벨기+배관내시경+라돈)</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>라돈 및 새집증후군 유해물질 실측 포함</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>현장 대면 1:1 심층 브리핑 제공</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>공문 규격 정밀 리포트 당일 전송</li>
-            </ul>
-          </div>
-          <button onclick="selectPackage('84')" class="mt-8 w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 text-sm transition-colors shadow-md shadow-blue-600/30">
-            이 패키지로 신청하기
-          </button>
+          <div class="text-xs font-mono font-bold text-slate-400">BOSCH GLL 3-80CG</div>
+          <h4 class="font-bold text-brand-900 text-base mt-1">360° 그린 레이저 레벨기</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            아트월 타일 수평·수직 단차, 문틀 기울기, 바닥 구배 불량을 0.1mm 단위로 정밀 계측.
+          </p>
         </div>
 
-        <!-- Large 114+ -->
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold uppercase text-slate-400">전용 114㎡ 이상 (40평형대~)</div>
-            <h4 class="text-xl font-bold text-brand-900 mt-1">대형 평형 마스터 패키지</h4>
-            <div class="mt-4 flex items-baseline gap-1">
-              <span class="text-3xl font-extrabold text-brand-900 font-mono">450,000</span>
-              <span class="text-slate-500 text-sm">원 (VAT 포함)</span>
-            </div>
-            <ul class="mt-6 space-y-3 text-xs text-slate-600">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>전문 감리원 3인 1조 180분 심층 점검</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>4대 정밀 장비 풀가동 + 세대 전체 배관 스캔</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>공기질 정밀 시험 성적 리포트 동봉</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>입주 후 하자 재점검 체크리스트 가이드 증정</li>
-            </ul>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
+            <i data-lucide="wind" class="w-5 h-5"></i>
           </div>
-          <button onclick="selectPackage('114')" class="mt-8 w-full py-3 px-4 rounded-xl border border-slate-300 font-semibold text-slate-700 hover:bg-slate-50 text-sm transition-colors">
-            이 패키지로 신청하기
-          </button>
+          <div class="text-xs font-mono font-bold text-slate-400">RADON EYE Plus2</div>
+          <h4 class="font-bold text-brand-900 text-base mt-1">라돈 및 공기질 측정기</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            1급 발암물질 라돈(대리석/타일) 및 포름알데히드 수치를 환경부 권고 기준치와 실시간 비교.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+          </div>
+          <div class="text-xs font-mono font-bold text-slate-400">RIGID 1080p FHD</div>
+          <h4 class="font-bold text-brand-900 text-base mt-1">광학 방수 배관 내시경</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            욕실·세탁실 배수구 내부로 카메라를 진입시켜 시멘트 몰탈 퇴적과 배수관 파손을 확인.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- SCREEN 2: Interactive Online Booking Form (온라인 사전점검 신청 화면) -->
-  <section id="booking" class="py-20 bg-brand-900 text-white relative overflow-hidden">
-    <!-- Abstract Tech Background -->
-    <div class="absolute inset-0 opacity-10 technical-grid"></div>
-    
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-semibold mb-3">
-          온라인 예약 접수 화면
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-          신축 아파트 사전점검 신청하기
-        </h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-2">
-          단지명과 원하시는 점검 일정을 입력하시면, 예약 가능 여부와 확정 견적을 즉시 산출해 드립니다.
-        </p>
-      </div>
-
-      <!-- Booking Form Card -->
-      <div class="bg-white text-slate-800 rounded-2xl shadow-2xl p-6 sm:p-10 border border-slate-200">
-        
-        <form id="inspectionForm" onsubmit="handleFormSubmit(event)" class="space-y-8">
-          
-          <!-- STEP 1: Apartment Info -->
-          <div>
-            <div class="flex items-center gap-2 text-sm font-bold text-blue-600 uppercase tracking-wider mb-4">
-              <span class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">1</span>
-              <span>아파트 단지 및 일정 정보</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1.5">아파트 단지명 *</label>
-                <input type="text" id="aptName" required placeholder="예: 올림픽파크포레온, 래미안원페를라" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-              </div>
-              <div class="grid grid-cols-2 gap-2">
-                <div>
-                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">동 *</label>
-                  <input type="text" id="aptDong" required placeholder="예: 104동" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold text-slate-700 mb-1.5">호수 *</label>
-                  <input type="text" id="aptHo" required placeholder="예: 1502호" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-                </div>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1.5">사전점검 희망일 *</label>
-                <input type="date" id="inspectDate" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1.5">희망 시간대 *</label>
-                <select id="inspectTime" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm bg-white">
-                  <option value="">선택해 주세요</option>
-                  <option value="오전 09:30 (1차)">오전 09:30 (1차 추천)</option>
-                  <option value="오후 13:00 (2차)">오후 13:00 (2차)</option>
-                  <option value="오후 15:30 (3차)">오후 15:30 (3차)</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <!-- STEP 2: Package Selection -->
-          <div class="pt-6 border-t border-slate-200">
-            <div class="flex items-center gap-2 text-sm font-bold text-blue-600 uppercase tracking-wider mb-4">
-              <span class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">2</span>
-              <span>평형 및 점검 패키지 선택</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <label class="relative flex flex-col p-4 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/50">
-                <input type="radio" name="sizeOption" value="59" onchange="calculatePrice()" class="sr-only">
-                <span class="font-bold text-sm text-slate-900">전용 59㎡ (24~25평)</span>
-                <span class="text-xs text-slate-500 mt-1">소형 평형</span>
-                <span class="text-sm font-mono font-bold text-blue-600 mt-3">280,000원</span>
-              </label>
-
-              <label class="relative flex flex-col p-4 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/50">
-                <input type="radio" name="sizeOption" value="84" checked onchange="calculatePrice()" class="sr-only">
-                <span class="font-bold text-sm text-slate-900 flex items-center justify-between">
-                  <span>전용 84㎡ (32~35평)</span>
-                  <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white">BEST</span>
-                </span>
-                <span class="text-xs text-slate-500 mt-1">국민 평형 올인원</span>
-                <span class="text-sm font-mono font-bold text-blue-600 mt-3">350,000원</span>
-              </label>
-
-              <label class="relative flex flex-col p-4 border rounded-xl cursor-pointer hover:border-blue-500 transition-all has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/50">
-                <input type="radio" name="sizeOption" value="114" onchange="calculatePrice()" class="sr-only">
-                <span class="font-bold text-sm text-slate-900">전용 114㎡+ (40평대~)</span>
-                <span class="text-xs text-slate-500 mt-1">대형 평형 마스터</span>
-                <span class="text-sm font-mono font-bold text-blue-600 mt-3">450,000원</span>
-              </label>
-            </div>
-
-            <!-- Optional Add-on -->
-            <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
-              <label class="flex items-center gap-3 cursor-pointer">
-                <input type="checkbox" id="airOption" onchange="calculatePrice()" class="w-4 h-4 rounded text-blue-600 focus:ring-blue-500 border-slate-300">
-                <div>
-                  <div class="text-xs font-bold text-slate-800">라돈 및 1급 발암물질 정밀 공기질 시험 성적서 추가</div>
-                  <div class="text-[11px] text-slate-500">대리석 아트월/타일 부위 3개소 정밀 계측</div>
-                </div>
-              </label>
-              <span class="text-xs font-mono font-bold text-slate-700">+50,000원</span>
-            </div>
-          </div>
-
-          <!-- STEP 3: Applicant Contact -->
-          <div class="pt-6 border-t border-slate-200">
-            <div class="flex items-center gap-2 text-sm font-bold text-blue-600 uppercase tracking-wider mb-4">
-              <span class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-xs">3</span>
-              <span>신청자 연락처 및 비고</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1.5">신청자 성함 *</label>
-                <input type="text" id="clientName" required placeholder="홍길동" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1.5">연락처 (휴대폰) *</label>
-                <input type="tel" id="clientPhone" required placeholder="010-0000-0000" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label class="block text-xs font-semibold text-slate-700 mb-1.5">특이사항 또는 요청사항 (선택)</label>
-              <textarea id="clientNotes" rows="2" placeholder="예: 마이너스 옵션 세대입니다 / 특정 타일 부위 누수가 의심됩니다" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm"></textarea>
-            </div>
-          </div>
-
-          <!-- Price Summary & Submit Bar -->
-          <div class="p-5 rounded-xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <div class="text-xs text-slate-400">실시간 산출 최종 견적 (예약금 없음 / 현장 후불제)</div>
-              <div class="text-2xl font-extrabold text-blue-400 font-mono mt-0.5" id="totalPriceDisplay">
-                350,000원
-              </div>
-            </div>
-            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-blue-600 hover:bg-blue-700 font-bold rounded-xl text-sm transition-all shadow-lg shadow-blue-600/40 flex items-center justify-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>사전점검 예약 신청 완료하기</span>
-            </button>
-          </div>
-
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section (자주 묻는 질문) -->
-  <section id="faq" class="py-20 bg-white border-b border-slate-200">
+  <!-- 7. FAQ (아코디언 8개) -->
+  <section id="faq" class="py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center mb-12">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">FAQ</h2>
+      <div class="text-center mb-14">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">FREQUENTLY ASKED QUESTIONS</h2>
         <h3 class="text-3xl font-extrabold text-brand-900 tracking-tight">
-          사전점검 관련 자주 묻는 질문
+          사전점검 자주 묻는 질문 8선
         </h3>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-3">
         
-        <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
           <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
-            <span>사전점검 당일 입주자 본인이 반드시 동행해야 하나요?</span>
+            <span>1. 사전점검 당일 입주자 본인이 반드시 참석해야 하나요?</span>
             <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
           </summary>
           <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            동행하지 않으셔도 100% 진행 가능합니다. 현장 매니저에게 비밀번호 또는 매니저 인계만 진행해 주시면, 전 과정을 사진 및 동영상으로 기록하여 당일 19:00까지 정밀 리포트로 완벽하게 브리핑해 드립니다.
+            동행하지 않으셔도 100% 비대면 진행이 가능합니다. 현장 매니저에게 현관 비밀번호만 인계해 주시면 전 과정을 사진/영상으로 기록하여 당일 19:00까지 리포트로 브리핑해 드립니다.
           </p>
         </details>
 
-        <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
           <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
-            <span>시공사(건설사) 하자접수 앱에 직접 등록해야 하나요?</span>
+            <span>2. 시공사(건설사) 하자접수 앱에 직접 일일이 올려야 하나요?</span>
             <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
           </summary>
           <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            저희가 제공하는 리포트는 건설사 공식 접수 규격(공간 구분 / 하자 부위 / 지적 내용 / 하자 사진)에 맞추어 구성되어 있어, 리포트 화면의 텍스트와 사진을 복사하여 앱에 그대로 붙여넣으시면 5분 안에 접수가 끝납니다.
+            저희 리포트는 건설사 공식 접수 규격(위치/하자유형/상세내용/사진)에 정확히 맞추어 발급되므로, 리포트 화면에서 복사·붙여넣기만 하시면 5분 안에 간편하게 접수하실 수 있습니다.
           </p>
         </details>
 
-        <details class="group bg-slate-50 p-5 rounded-xl border border-slate-200">
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
           <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
-            <span>일정 변경이나 취소 시 위약금이 발생하나요?</span>
+            <span>3. 일정 변경이나 취소 시 위약금이 발생하나요?</span>
             <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
           </summary>
           <p class="text-xs text-slate-600 mt-3 leading-relaxed">
-            점검 예정일 3일 전까지 100% 위약금 없이 무료 취소 및 일정 변경이 가능합니다. 건설사 사전점검 일정이 연기되는 경우에도 추가 비용 없이 일정을 조정해 드립니다.
+            점검 예정일 3일 전까지는 100% 무료 취소 및 일정 변경이 가능합니다. 건설사 사전점검 일정이 연기되는 경우에도 추가 비용 없이 일정을 변경해 드립니다.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
+          <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
+            <span>4. 점검 시간은 얼마나 소요되나요?</span>
+            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            국민 평형(84㎡) 기준 감리원 2인 1조가 약 150분(2시간 30분) 동안 정밀 검측을 진행합니다.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
+          <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
+            <span>5. 현장에 어떤 장비가 투입되나요?</span>
+            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            FLIR 열화상 카메라, BOSCH 3D 레이저 레벨기, 라돈아이 플러스2 공기질 측정기, HD 방수 배관 내시경 등 4대 공인 장비가 전 세대 기본 투입됩니다.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
+          <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
+            <span>6. 같은 아파트 입주민과 공동구매 할인이 가능한가요?</span>
+            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            동일 단지 5세대 이상 동시 예약 시 세대당 30,000원 추가 할인이 적용됩니다. 온라인 문의 폼의 '공동구매' 옵션을 체크해 주세요.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
+          <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
+            <span>7. 결제는 언제 진행하나요?</span>
+            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            예약금 없이 100% 현장 후불제입니다. 당일 점검 및 현장 브리핑을 마치신 후 카드 또는 계좌이체로 결제해 주시면 됩니다.
+          </p>
+        </details>
+
+        <details class="group bg-white p-5 rounded-xl border border-slate-200">
+          <summary class="font-bold text-sm text-slate-900 cursor-pointer flex justify-between items-center">
+            <span>8. 점검 후 시공사가 하자를 인정하지 않으면 어떻게 하나요?</span>
+            <span class="transition group-open:rotate-180"><i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i></span>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            국토교통부 '공동주택 하자의 조사, 보수비용 산정 및 하자판정기준'에 근거한 법적 규격 데이터로 리포트를 작성하므로 시공사 하자관리팀에서 반박하기 어렵습니다.
           </p>
         </details>
 
       </div>
+    </div>
+  </section>
+
+  <!-- 8. 최종 CTA (연락처·QR 코드, 전화 문의 플로팅 버튼) -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-900">
+        우리 집 입주 전, 가장 완벽한 점검을 약속합니다
+      </h3>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200 flex items-center gap-4 text-left">
+          <div class="w-20 h-20 bg-white border border-slate-300 rounded-xl p-1.5 flex items-center justify-center shadow-inner">
+            <!-- Simulated QR Code SVG -->
+            <svg viewBox="0 0 100 100" class="w-full h-full text-slate-800" fill="currentColor">
+              <path d="M0 0h30v30H0zM10 10h10v10H10zM70 0h30v30H70zM80 10h10v10H80zM0 70h30v30H0zM10 80h10v10H10zM40 0h10v10H40zM50 20h10v10H50zM40 40h20v20H40zM70 40h10v10H70zM90 40h10v10H90zM70 60h10v10H70zM0 40h10v20H0zM20 50h10v10H20zM40 70h10v30H40zM60 70h20v10H60zM60 90h10v10H60zM80 80h20v20H80z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-semibold">스마트폰 카메라로 촬영 시</div>
+            <div class="text-sm font-bold text-brand-900">카카오톡 1:1 실시간 상담</div>
+            <div class="text-xs text-blue-600 mt-1 font-mono">@homecheck_lab</div>
+          </div>
+        </div>
+
+        <div class="text-left space-y-2">
+          <div class="text-xs text-slate-500 font-semibold">대표 전화 문의 (연중무휴 09:00~19:00)</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-blue-600 font-mono">1544-7890</div>
+          <div class="text-xs text-slate-500">주말 사전점검 현장 지원 센터 운영 중</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 2-2. 문의 페이지 (PC/Mobile 반응형 웹)      -->
+  <!-- ========================================== -->
+  <section id="inquiry-section" class="py-20 bg-slate-900 text-white relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-semibold mb-3">
+          온라인 사전점검 접수 및 문의 센터
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          온라인 점검 예약 및 실시간 문의
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          접수 즉시 데이터베이스에 안전하게 등록되며, 접수 내역은 언제든 본인 확인 후 조회하실 수 있습니다.
+        </p>
+      </div>
+
+      <!-- 1. 빠른 연락 카드 3종 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center">
+            <i data-lucide="phone-call" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">전화 빠른 상담</div>
+            <div class="text-base font-bold text-white font-mono">1544-7890</div>
+            <div class="text-[11px] text-emerald-400">평일/주말 09:00~19:00</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">카카오톡 채널 상담</div>
+            <div class="text-base font-bold text-white">@홈체크랩</div>
+            <div class="text-[11px] text-amber-300">실시간 채팅 상담 응대</div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400">공식 이메일 접수</div>
+            <div class="text-sm font-bold text-white font-mono">contact@homecheck.kr</div>
+            <div class="text-[11px] text-slate-400">시공사 공문/협력 문의</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Form + Inquiry Lookup Tabs -->
+      <div class="bg-white text-slate-800 rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+        
+        <!-- Tab Headers -->
+        <div class="flex border-b border-slate-200 bg-slate-50">
+          <button onclick="switchTab('tabForm')" id="tabBtnForm" class="flex-1 py-4 text-center font-bold text-sm text-blue-600 border-b-2 border-blue-600 bg-white flex items-center justify-center gap-2">
+            <i data-lucide="edit" class="w-4 h-4"></i>
+            <span>1. 온라인 점검 신청서 작성</span>
+          </button>
+          <button onclick="switchTab('tabLookup')" id="tabBtnLookup" class="flex-1 py-4 text-center font-bold text-sm text-slate-500 hover:text-slate-800 flex items-center justify-center gap-2">
+            <i data-lucide="search" class="w-4 h-4"></i>
+            <span>2. 내 접수 내역 조회 (간단 인증)</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: Online Form Body -->
+        <div id="tabFormContent" class="p-6 sm:p-10 space-y-6">
+          <form id="onlineInquiryForm" onsubmit="submitInquiry(event)" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">이름 *</label>
+                <input type="text" id="inqName" required placeholder="홍길동" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">연락처 * (자동 하이픈)</label>
+                <input type="tel" id="inqPhone" required placeholder="010-0000-0000" oninput="formatPhone(this)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm font-mono">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">이메일 * (형식 검증)</label>
+                <input type="email" id="inqEmail" required placeholder="example@domain.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">아파트명 (단지명) *</label>
+                <input type="text" id="inqApt" required placeholder="예: 올림픽파크포레온 105동 1204호" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">전용면적 선택 *</label>
+                <select id="inqArea" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm bg-white">
+                  <option value="59㎡ (24평형)">전용 59㎡ (24~25평형) - 280,000원</option>
+                  <option value="74㎡ (30평형)">전용 74㎡ (29~30평형) - 310,000원</option>
+                  <option value="84㎡ (34평형)" selected>전용 84㎡ (32~35평형) - 350,000원 [추천]</option>
+                  <option value="114㎡ (45평형)">전용 114㎡ 이상 (40평형대~) - 450,000원</option>
+                  <option value="49㎡ 이하 (소형)">전용 49㎡ 이하 (소형) - 240,000원</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">희망 점검일 *</label>
+                <input type="date" id="inqDate" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm">
+              </div>
+            </div>
+
+            <!-- 추가 옵션 4종 (체크박스) -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">추가 옵션 선택 (4종)</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" id="optRadon" class="rounded text-blue-600">
+                  <span>라돈·새집증후군 정밀 공기질 검사 (+50,000원)</span>
+                </label>
+                <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" id="optThermal" class="rounded text-blue-600">
+                  <span>단열재 결로 전수 열화상 심층 리포트 (+30,000원)</span>
+                </label>
+                <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" id="optGroup" class="rounded text-blue-600">
+                  <span>동일 단지 5세대 공동구매 할인 (-30,000원)</span>
+                </label>
+                <label class="flex items-center gap-2 p-3 rounded-lg border border-slate-200 bg-slate-50 cursor-pointer">
+                  <input type="checkbox" id="optReinspect" class="rounded text-blue-600">
+                  <span>입주 후 하자 보수 확인 재점검 예약 (+100,000원)</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">문의 내용 및 특이사항</label>
+              <textarea id="inqMessage" rows="3" placeholder="궁금하신 점이나 아파트 옵션(마이너스 옵션, 확장형 등) 특이사항을 적어주세요." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm"></textarea>
+            </div>
+
+            <!-- 개인정보 동의 -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="inqPrivacy" required class="rounded text-blue-600">
+                <span class="text-slate-700">[필수] 사전점검 접수 및 상담을 위한 개인정보 수집·이용에 동의합니다.</span>
+              </label>
+              <span class="text-[11px] text-slate-400">보안 암호화 저장</span>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-base transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>사전점검 문의 및 예약 접수하기 (API 1종 + DB 저장)</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- TAB 2: Inquiry Lookup (본인 확인 간단 인증) -->
+        <div id="tabLookupContent" class="p-6 sm:p-10 space-y-6 hidden">
+          <div class="max-w-md mx-auto space-y-4">
+            <div class="text-center">
+              <h4 class="font-bold text-base text-brand-900">본인 문의 및 예약 내역 조회</h4>
+              <p class="text-xs text-slate-500 mt-1">접수 시 입력하셨던 성함과 휴대폰 번호로 인증합니다.</p>
+            </div>
+
+            <form onsubmit="handleLookup(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">성함</label>
+                <input type="text" id="lookupName" required placeholder="홍길동" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">휴대폰 번호</label>
+                <input type="tel" id="lookupPhone" required placeholder="010-0000-0000" oninput="formatPhone(this)" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm font-mono">
+              </div>
+              <button type="submit" class="w-full py-3.5 bg-brand-900 hover:bg-slate-800 text-white font-bold rounded-xl text-sm transition-colors">
+                내 접수 상태 조회하기
+              </button>
+            </form>
+
+            <!-- Lookup Result Container -->
+            <div id="lookupResult" class="hidden p-5 rounded-2xl bg-blue-50/80 border border-blue-200 text-xs space-y-2 mt-4">
+              <div class="flex justify-between items-center pb-2 border-b border-blue-200">
+                <span class="font-bold text-blue-900">접수 번호: #HK-202611-042</span>
+                <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-semibold text-[10px]">답변 완료 / 배정 대기</span>
+              </div>
+              <div class="flex justify-between"><span class="text-slate-500">신청 아파트</span><span id="resApt" class="font-bold text-slate-800">올림픽파크포레온 104동</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">희망 일시</span><span id="resDate" class="font-bold text-slate-800">2026-11-20 (오전)</span></div>
+              <div class="flex justify-between"><span class="text-slate-500">신청 옵션</span><span id="resOpt" class="font-bold text-slate-800">전용 84㎡ + 라돈 정밀측정</span></div>
+              <div class="pt-2 text-[11px] text-blue-800 border-t border-blue-200">
+                담당 감리 소장님이 배정되었으며, 점검 전날 유선 사전 확인 연락을 드릴 예정입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 최근 문의 공개 (최근 문의 5건 및 답변 상태) & 예약 안내 -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Recent Inquiries (5 items) -->
+        <div class="lg:col-span-7 bg-slate-800/80 rounded-2xl p-6 border border-slate-700">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="font-bold text-sm text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              최근 실시간 문의 접수 현황 (최근 5건)
+            </h4>
+            <span class="text-[11px] text-slate-400">개인정보 마스킹 처리</span>
+          </div>
+
+          <div class="space-y-2.5 text-xs">
+            <div class="p-3 rounded-xl bg-slate-900/60 flex items-center justify-between border border-slate-700/60">
+              <div>
+                <span class="font-bold text-slate-200">올림픽파크포레온 84A</span>
+                <span class="text-slate-400 ml-2">김*호 님</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">답변완료</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/60 flex items-center justify-between border border-slate-700/60">
+              <div>
+                <span class="font-bold text-slate-200">메이플자이 59B</span>
+                <span class="text-slate-400 ml-2">이*영 님</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px] font-semibold">예약확정</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/60 flex items-center justify-between border border-slate-700/60">
+              <div>
+                <span class="font-bold text-slate-200">래미안원페를라 84B</span>
+                <span class="text-slate-400 ml-2">박*수 님</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-semibold">답변완료</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/60 flex items-center justify-between border border-slate-700/60">
+              <div>
+                <span class="font-bold text-slate-200">트리우스광명 74A</span>
+                <span class="text-slate-400 ml-2">최*진 님</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-semibold">답변대기</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900/60 flex items-center justify-between border border-slate-700/60">
+              <div>
+                <span class="font-bold text-slate-200">디에이치퍼스티어 114</span>
+                <span class="text-slate-400 ml-2">정*우 님</span>
+              </div>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px] font-semibold">예약확정</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Response & Booking Info Box -->
+        <div class="lg:col-span-5 bg-slate-800/80 rounded-2xl p-6 border border-slate-700 space-y-4 text-xs">
+          <h4 class="font-bold text-sm text-white">답변 및 예약 진행 안내</h4>
+          <ul class="space-y-2 text-slate-300 leading-relaxed list-disc list-inside">
+            <li>온라인 접수 즉시 담당 관리자에게 텔레그램 알림이 전송됩니다.</li>
+            <li>접수 후 30분 이내(영업시간 기준) 전담 상담사가 유선 또는 카카오톡으로 일정 확인 연락을 드립니다.</li>
+            <li>예약 확정 시 모바일 예약 확정서 및 당일 현장 준비물 가이드가 발송됩니다.</li>
+            <li>사전점검 당일 소장님이 현장에 20분 전 사전 도착하여 대기합니다.</li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- Interactive Submission Success Modal -->
-  <div id="successModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 text-slate-800">
+  <div id="successModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 text-slate-800">
       
       <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
         <i data-lucide="check-circle" class="w-8 h-8"></i>
@@ -786,33 +1050,44 @@
 
       <div class="text-center">
         <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-700 mb-2">
-          데모 시연 모드: 접수 프로세스 검증 완료
+          데모 시연 모드: 접수 API 1종 + DB 저장 검증 완료
         </span>
         <h3 class="text-xl font-extrabold text-brand-900">
-          사전점검 예약 접수가 완료되었습니다
+          온라인 사전점검 접수가 완료되었습니다
         </h3>
         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-          입력하신 정보가 데이터베이스 검증 규격에 맞춰 정상 파싱되었습니다.<br>
-          실제 운영 환경에서는 담당 소장님 배정 및 카카오 알림톡이 자동 발송됩니다.
+          고객님의 정보가 규격에 맞게 검증되었으며,<br>
+          실제 운영 환경에서는 텔레그램 관리자 채널 알림 및 알림톡이 자동 발송됩니다.
         </p>
       </div>
 
       <!-- Submitted Summary Card -->
       <div class="mt-6 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
-        <div class="flex justify-between"><span class="text-slate-500">신청 단지</span><span id="modalApt" class="font-bold text-slate-800">-</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">희망 일시</span><span id="modalDateTime" class="font-bold text-slate-800">-</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">신청 패키지</span><span id="modalPackage" class="font-bold text-blue-600">-</span></div>
-        <div class="flex justify-between"><span class="text-slate-500">예약자 성함</span><span id="modalClient" class="font-bold text-slate-800">-</span></div>
-        <div class="flex justify-between pt-2 border-t border-slate-200 font-bold"><span class="text-slate-700">최종 견적</span><span id="modalPrice" class="font-mono text-blue-600 text-sm">-</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">신청 고객</span><span id="modalName" class="font-bold text-slate-800">-</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">연락처</span><span id="modalPhone" class="font-bold font-mono text-slate-800">-</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">단지 정보</span><span id="modalApt" class="font-bold text-slate-800">-</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">전용면적</span><span id="modalArea" class="font-bold text-blue-600">-</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">희망 일시</span><span id="modalDate" class="font-bold text-slate-800">-</span></div>
       </div>
 
-      <div class="mt-6 flex gap-3">
-        <button onclick="closeModal()" class="w-full py-3 bg-brand-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-xs transition-colors">
+      <div class="mt-6">
+        <button onclick="closeModal()" class="w-full py-3.5 bg-brand-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-xs transition-colors">
           확인 (화면으로 돌아가기)
         </button>
       </div>
 
     </div>
+  </div>
+
+  <!-- Floating Call Button & Scroll to Top (공통 UI) -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-2">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-11 h-11 rounded-full bg-white text-slate-700 shadow-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+    <a href="tel:15447890" class="flex items-center gap-2 px-4 py-3 rounded-full bg-blue-600 text-white font-bold text-xs shadow-xl shadow-blue-600/40 hover:bg-blue-700 transition-all hover:scale-105">
+      <i data-lucide="phone" class="w-4 h-4 animate-bounce"></i>
+      <span>전화 문의 1544-7890</span>
+    </a>
   </div>
 
   <!-- Footer -->
@@ -825,91 +1100,134 @@
           <span>HOMECHECK <span class="text-blue-500 font-extrabold">LAB</span></span>
         </div>
         <div class="flex items-center gap-6 text-slate-400">
-          <a href="#equipment" class="hover:text-white transition-colors">정밀 장비</a>
-          <a href="#defects" class="hover:text-white transition-colors">하자 사례</a>
-          <a href="#pricing" class="hover:text-white transition-colors">정찰제 가격</a>
-          <a href="#booking" class="hover:text-white transition-colors">온라인 접수</a>
+          <a href="#features" class="hover:text-white transition-colors">서비스 차별점</a>
+          <a href="#simulator" class="hover:text-white transition-colors">가격 시뮬레이터</a>
+          <a href="#cases" class="hover:text-white transition-colors">점검 사례</a>
+          <a href="#process" class="hover:text-white transition-colors">5단계 프로세스</a>
+          <a href="#inquiry-section" class="hover:text-white transition-colors">온라인 접수</a>
         </div>
       </div>
 
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[11px] leading-relaxed">
         <div>
-          <p class="text-slate-300 font-medium">홈체크 랩 (HOMECHECK LAB) | 신축 아파트 정밀 하자점검 연구소</p>
+          <p class="text-slate-300 font-medium">홈체크 랩 (HOMECHECK LAB) | 신축 아파트 정밀 사전점검 연구소</p>
           <p class="text-slate-400 mt-1">
-            건축·토목 엔지니어링 특급 감리 전문가 상주 • FLIR / BOSCH 공인 정밀 계측 규격 준수
+            건축·토목 엔지니어링 특급 감리 전문가 100% 투입 • FLIR / BOSCH 공인 정밀 계측 규격 준수
           </p>
           <p class="text-slate-400 mt-1">
-            고객센터: 1544-0000 (평일 09:00 ~ 18:00) • 주말 사전점검 현장 지원 연중무휴
+            고객센터: 1544-7890 (평일/주말 09:00 ~ 19:00) • 사업자등록번호: 000-00-00000
           </p>
         </div>
         
         <!-- Mandatory Showcase Disclaimer -->
-        <div class="bg-slate-800/80 p-3 rounded-lg border border-slate-700/80 max-w-md text-slate-300">
-          <span class="text-amber-400 font-bold block mb-1">※ 포트폴리오 데모 안내 (Showcase Notice)</span>
-          본 웹사이트는 신축 아파트 사전점검 서비스의 반응형 웹 및 온라인 예약 접수 시스템 구축 역량을 증명하기 위해 제작된 정밀 프로토타입 쇼케이스입니다.
+        <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 max-w-md text-slate-300">
+          <span class="text-amber-400 font-bold block mb-1">※ 쇼케이스 안내 (Showcase Notice)</span>
+          본 웹사이트는 위시켓 신축 아파트 사전점검 서비스 반응형 홈페이지 제작 프로젝트의 상세 요구사양서(메인+문의 2개 화면, 시뮬레이터, 접수 API)에 100% 맞추어 빌드된 공식 시연 프로토타입입니다.
         </div>
       </div>
 
       <div class="pt-6 border-t border-slate-800/60 text-slate-400 text-center text-[10px]">
-        © 2026 HOMECHECK LAB. All Rights Reserved. Built for Responsive Web & Inquiry Automation Showcase.
+        © 2026 HOMECHECK LAB. All Rights Reserved. Built for Wishket #159461 Showcase.
       </div>
 
     </div>
   </footer>
 
-  <!-- Interactive JavaScript Logic -->
+  <!-- Scripts -->
   <script>
-    // Initialize Lucide Icons
+    // Initialize Icons
     lucide.createIcons();
 
-    // Package selection shortcut from pricing table
-    function selectPackage(size) {
-      const radio = document.querySelector(`input[name="sizeOption"][value="${size}"]`);
-      if (radio) {
-        radio.checked = true;
-        calculatePrice();
-      }
-      const bookingSec = document.getElementById('booking');
-      bookingSec.scrollIntoView({ behavior: 'smooth' });
+    // 1. Phone Auto-Hyphen Formatting
+    function formatPhone(target) {
+      target.value = target.value
+        .replace(/[^0-9]/g, '')
+        .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
     }
 
-    // Dynamic Price Calculator
-    function calculatePrice() {
-      const size = document.querySelector('input[name="sizeOption"]:checked').value;
-      const air = document.getElementById('airOption').checked;
-      
+    // 2. Price Simulator (5 Areas x 2 Options)
+    function runSimulator() {
+      const area = document.querySelector('input[name="simArea"]:checked').value;
+      const optRadon = document.getElementById('simOptRadon').checked;
+      const optThermal = document.getElementById('simOptThermal').checked;
+
       let base = 350000;
-      if (size === '59') base = 280000;
-      if (size === '84') base = 350000;
-      if (size === '114') base = 450000;
-      
-      const addon = air ? 50000 : 0;
-      const total = base + addon;
-      
-      document.getElementById('totalPriceDisplay').innerText = total.toLocaleString() + '원';
-      return { size, air, total };
+      let label = '전용 84㎡ (32~35평형)';
+      if (area === '49') { base = 240000; label = '전용 49㎡ 이하 (소형)'; }
+      if (area === '59') { base = 280000; label = '전용 59㎡ (24~25평형)'; }
+      if (area === '74') { base = 310000; label = '전용 74㎡ (29~30평형)'; }
+      if (area === '84') { base = 350000; label = '전용 84㎡ (32~35평형)'; }
+      if (area === '114') { base = 450000; label = '전용 114㎡ 이상 (40평형대~)'; }
+
+      let add = 0;
+      let opts = [];
+      if (optRadon) { add += 50000; opts.push('라돈측정'); }
+      if (optThermal) { add += 30000; opts.push('열화상심층'); }
+
+      const total = base + add;
+      document.getElementById('simTotalDisplay').innerText = total.toLocaleString() + '원';
+      document.getElementById('simSummaryText').innerText = `${label} 기준 ${opts.length > 0 ? '+ ' + opts.join(', ') : '기본 점검'}`;
+
+      return { area, total, label };
     }
 
-    // Form Submission Handler
-    function handleFormSubmit(event) {
+    // Transfer Simulator values to the inquiry form
+    function transferSimToForm() {
+      const { area } = runSimulator();
+      const select = document.getElementById('inqArea');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.includes(area)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      if (document.getElementById('simOptRadon').checked) {
+        document.getElementById('optRadon').checked = true;
+      }
+      if (document.getElementById('simOptThermal').checked) {
+        document.getElementById('optThermal').checked = true;
+      }
+    }
+
+    // 3. Tab Switching (Form vs Lookup)
+    function switchTab(tabId) {
+      const formContent = document.getElementById('tabFormContent');
+      const lookupContent = document.getElementById('tabLookupContent');
+      const btnForm = document.getElementById('tabBtnForm');
+      const btnLookup = document.getElementById('tabBtnLookup');
+
+      if (tabId === 'tabForm') {
+        formContent.classList.remove('hidden');
+        lookupContent.classList.add('hidden');
+        btnForm.classList.add('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-white');
+        btnForm.classList.remove('text-slate-500');
+        btnLookup.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-white');
+        btnLookup.classList.add('text-slate-500');
+      } else {
+        formContent.classList.add('hidden');
+        lookupContent.classList.remove('hidden');
+        btnLookup.classList.add('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-white');
+        btnLookup.classList.remove('text-slate-500');
+        btnForm.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600', 'bg-white');
+        btnForm.classList.add('text-slate-500');
+      }
+    }
+
+    // 4. Form Submit Handler
+    function submitInquiry(event) {
       event.preventDefault();
       
-      const apt = document.getElementById('aptName').value;
-      const dong = document.getElementById('aptDong').value;
-      const ho = document.getElementById('aptHo').value;
-      const date = document.getElementById('inspectDate').value;
-      const time = document.getElementById('inspectTime').value;
-      const name = document.getElementById('clientName').value;
-      const { size, air, total } = calculatePrice();
+      const name = document.getElementById('inqName').value;
+      const phone = document.getElementById('inqPhone').value;
+      const apt = document.getElementById('inqApt').value;
+      const area = document.getElementById('inqArea').value;
+      const date = document.getElementById('inqDate').value;
 
-      let packageLabel = size === '59' ? '전용 59㎡ (24평형)' : (size === '84' ? '전용 84㎡ (34평형)' : '전용 114㎡ (대형)');
-      if (air) packageLabel += ' + 라돈 정밀측정';
-
-      document.getElementById('modalApt').innerText = `${apt} ${dong} ${ho}`;
-      document.getElementById('modalDateTime').innerText = `${date} ${time}`;
-      document.getElementById('modalPackage').innerText = packageLabel;
-      document.getElementById('modalClient').innerText = name;
-      document.getElementById('modalPrice').innerText = total.toLocaleString() + '원';
+      document.getElementById('modalName').innerText = name;
+      document.getElementById('modalPhone').innerText = phone;
+      document.getElementById('modalApt').innerText = apt;
+      document.getElementById('modalArea').innerText = area;
+      document.getElementById('modalDate').innerText = date;
 
       const modal = document.getElementById('successModal');
       modal.classList.remove('hidden');
@@ -920,6 +1238,13 @@
       const modal = document.getElementById('successModal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
+    }
+
+    // 5. Lookup Handler
+    function handleLookup(event) {
+      event.preventDefault();
+      const res = document.getElementById('lookupResult');
+      res.classList.remove('hidden');
     }
   </script>
 </body>
